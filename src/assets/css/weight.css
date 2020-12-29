@@ -1,0 +1,58 @@
+.weight {
+    --size: calc(var(--mass, 0) * 10px);
+
+    color: rgb(calc(var(--mass) * 25), calc((10 - var(--mass)) * 14), 0);
+
+    background: currentColor;
+    height: var(--size);
+    width: var(--size);
+
+    position: relative;
+}
+
+.weight:before {
+    counter-reset: mass var(--mass);
+    content: counter(mass);
+
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    color: #fff;
+    font-size: calc(var(--mass) * 3px);
+    z-index: 1;
+}
+
+.weight._circle {
+    border-radius: 50%;
+}
+
+.weight._triangle {
+    height: calc(var(--size) / 2);
+    background: transparent;
+    overflow: hidden;
+}
+
+.weight._triangle:before {
+    top: 60%;
+}
+
+.weight._triangle:after {
+    content: '';
+    position: absolute;
+    left: 0;
+    right: 0;
+    width: 0;
+    height: 0;
+
+    border: 0 solid transparent;
+    border-width: calc(var(--size) / 2);
+    border-bottom-color: currentColor;
+
+    transform: translateY(-50%);
+}
+
+.weight._moving {
+    position: absolute;
+}

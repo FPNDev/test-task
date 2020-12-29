@@ -1,0 +1,25 @@
+.status {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+
+    background: #fffa;
+    font-size: 32px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.controls {
+    position: fixed;
+    right: 0;
+    bottom: 0;
+
+    padding: 30px;
+    font-size: 22px;
+    text-align: left;
+}

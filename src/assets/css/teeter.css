@@ -1,0 +1,30 @@
+@import 'weight';
+
+.teeter {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+
+    margin: 0 auto;
+    height: 100vh;
+    box-sizing: border-box;
+
+    position: relative;
+}
+
+.teeter-line {
+    height: 3px;
+    background: red;
+    transition: transform 300ms linear;
+}
+
+.teeter-base {
+    border: 40px solid transparent;
+    border-top-width: 80px;
+    border-bottom-width: 80px;
+    border-bottom-color: grey;
+    width: 0;
+    height: 0;
+    margin: 0 auto;
+    transform: translateY(-50%);
+}
